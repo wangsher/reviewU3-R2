@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="tool">
+  <meta name="design-style" content="vitals">
+  <title>八年級英語定期評量互動測驗（Unit 3–4 含節慶篇）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Figtree:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Page and surfaces (Vitals) */
+      --background: #ffffff;
+      --surface-container-low: #f1f7f8;
+      --surface-container: #e3f1f3;
+      --surface-container-high: #d5e9ec;
+
+      /* Text */
+      --on-surface: #1b2b33;
+      --on-surface-variant: #46585f;
+
+      /* Rules */
+      --outline: #7b9198;
+      --outline-variant: #d5e3e5;
+
+      /* Accents */
+      --primary: #0f7c8a;
+      --on-primary: #ffffff;
+      --primary-container: #e3f1f3;
+      --on-primary-container: #0a5560;
+      --secondary: #1d5e3a;
+      --tertiary: #2e7d4f;
+      --error: #b3261e;
+      --on-error: #ffffff;
+
+      /* Data series */
+      --data-1: #0f7c8a;
+      --data-2: #2e7d4f;
+      --data-3: #b86e00;
+      --data-4: #5c5fb0;
+      --data-context: #b8c7ca;
+
+      /* Fonts (Non-Latin zh-TW listed first per design foundation) */
+      --font-headline: 'Noto Sans TC', 'Figtree', sans-serif;
+      --font-body: 'Noto Sans TC', 'Atkinson Hyperlegible', sans-serif;
+      --font-label: 'Noto Sans TC', 'Figtree', sans-serif;
+      --font-en: 'Atkinson Hyperlegible', 'Noto Sans TC', sans-serif;
+
+      /* Shape */
+      --rounded: 0.625rem;
+      --rounded-lg: 0.875rem;
+      --rounded-full: 9999px;
+
+      /* Style effects */
+      --top-bar: 6px solid var(--primary);
+      --status-bar-width: 4px;
+      --card-border: 1px solid var(--outline-variant);
+      --card-lift: 0 1px 2px rgb(27 43 51 / 0.05), 0 6px 16px rgb(27 43 51 / 0.05);
+
+      /* Shared semantic & focus tokens */
+      --positive: #2e7d4f;
+      --warning: #b86e00;
+      --focus: #0f7c8a;
+
+      /* Focused Tool type scale */
+      --display-size: clamp(1.625rem, 1.3rem + 1.1vw, 2.125rem);
+      --headline-size: clamp(1.2rem, 1.05rem + 0.45vw, 1.45rem);
+      --subhead-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+      --body-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.025rem);
+      --label-size: 0.78rem;
+
+      /* Spacing scale (4pt base) */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+
+      /* Motion */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+    }
+
+    /* Base reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      background-color: var(--surface-container-low);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { position: static !important; }
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .page-shell {
+      border-top: var(--top-bar);
+      min-height: 100vh;
+    }
+
+    .page-grid {
+      display: grid;
+      gap: var(--space-lg);
+      padding: var(--space-lg);
+      max-width: 1180px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .page-grid * { min-width: 0; }
+
+    /* Focus rings */
+    :focus-visible {
+      outline: 2.5px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    /* Typography */
+    .title {
+      font-family: var(--font-headline);
+      font-size: var(--display-size);
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.2;
+      color: var(--on-surface);
+      margin: 0;
+    }
+    .section-title {
+      font-family: var(--font-headline);
+      font-size: var(--headline-size);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--on-surface);
+      margin: 0;
+    }
+    .lede {
+      font-size: 1.025rem;
+      line-height: 1.65;
+      color: var(--on-surface-variant);
+      max-width: 65ch;
+      margin: var(--space-sm) 0 0 0;
+    }
+    .label-text {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 600;
+      color: var(--on-surface-variant);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    /* Header block */
+    .hero-header {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .header-top-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    /* Reassurance chips */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: var(--label-size);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded-full);
+      background: color-mix(in srgb, var(--tertiary) 14%, var(--background));
+      color: var(--secondary);
+      white-space: nowrap;
+    }
+    .chip[data-status="info"] {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+    }
+    .chip[data-status="alert"] {
+      background: color-mix(in srgb, var(--error) 10%, var(--background));
+      color: var(--error);
+    }
+    .chip[data-status="neutral"] {
+      background: var(--surface-container-low);
+      color: var(--on-surface-variant);
+      border: 1px solid var(--outline-variant);
+    }
+
+    /* Status cards row */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+    .status-card {
+      background: var(--background);
+      border: var(--card-border);
+      border-left: var(--status-bar-width) solid var(--primary);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .status-card[data-status="ok"] { border-left-color: var(--tertiary); }
+    .status-card[data-status="alert"] { border-left-color: var(--error); }
+    .status-card[data-status="warn"] { border-left-color: var(--data-3); }
+
+    .kpi-value {
+      font-family: var(--font-headline);
+      font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--on-surface);
+      font-variant-numeric: tabular-nums;
+    }
+    .kpi-caption {
+      font-size: 0.85rem;
+      color: var(--on-surface-variant);
+    }
+    .kpi-caption[data-status="ok"] { color: var(--secondary); font-weight: 600; }
+    .kpi-caption[data-status="alert"] { color: var(--error); font-weight: 600; }
+
+    /* Filter control bar */
+    .filter-panel {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .segmented-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .seg-btn {
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded);
+      border: 1px solid var(--outline-variant);
+      background: var(--background);
+      color: var(--on-surface);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    .seg-btn:hover {
+      background: var(--surface-container-low);
+      border-color: var(--outline);
+    }
+    .seg-btn[aria-pressed="true"] {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+    .seg-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    /* Buttons */
+    .btn {
+      min-height: 44px;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      border: 1px solid transparent;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: var(--on-primary-container);
+    }
+    .btn-secondary {
+      background: var(--background);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--surface-container-low);
+    }
+    .btn-ghost {
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+      border-color: var(--outline-variant);
+    }
+    .btn-ghost:hover:not(:disabled) {
+      background: var(--surface-container);
+    }
+    .btn-danger-outline {
+      background: var(--background);
+      color: var(--error);
+      border-color: color-mix(in srgb, var(--error) 45%, var(--background));
+    }
+    .btn-danger-outline:hover:not(:disabled) {
+      background: color-mix(in srgb, var(--error) 8%, var(--background));
+    }
+    .btn-danger-outline[data-armed="true"] {
+      background: var(--error);
+      color: var(--on-error);
+      border-color: var(--error);
+    }
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    /* Main Workspace: 2-column asymmetric layout on desktop */
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+
+    /* Question Card */
+    .quiz-card {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--card-lift);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      animation: fadeSlideUp var(--dur-short) var(--ease-out);
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .quiz-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      padding-bottom: var(--space-md);
+      border-bottom: 1px solid var(--outline-variant);
+    }
+    .quiz-number {
+      font-family: var(--font-headline);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--on-surface);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Cloze passage box */
+    .passage-box {
+      background: var(--surface-container-low);
+      border-left: var(--status-bar-width) solid var(--primary);
+      border-radius: var(--rounded);
+      padding: var(--space-md) var(--space-lg);
+      font-family: var(--font-en);
+      font-size: 1.0625rem;
+      line-height: 1.85;
+      color: var(--on-surface);
+    }
+    .passage-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 700;
+      color: var(--on-primary-container);
+      margin-bottom: var(--space-xs);
+      display: block;
+    }
+    .cloze-blank {
+      display: inline-block;
+      padding: 0 var(--space-sm);
+      margin: 0 2px;
+      border-radius: var(--rounded);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      background: var(--background);
+      border: 1.5px solid var(--outline);
+      color: var(--on-surface);
+      line-height: 1.4;
+    }
+    .cloze-blank.is-current {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+    .cloze-blank.is-correct {
+      background: color-mix(in srgb, var(--tertiary) 14%, var(--background));
+      color: var(--secondary);
+      border-color: var(--tertiary);
+    }
+    .cloze-blank.is-wrong {
+      background: color-mix(in srgb, var(--error) 10%, var(--background));
+      color: var(--error);
+      border-color: var(--error);
+    }
+
+    /* Question stem */
+    .question-stem {
+      font-family: var(--font-en);
+      font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+      font-weight: 700;
+      line-height: 1.6;
+      color: var(--on-surface);
+      margin: 0;
+    }
+    .vocab-blank-token {
+      display: inline-block;
+      padding: 0 var(--space-sm);
+      border-bottom: 2.5px solid var(--primary);
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* Hint toggle box */
+    .hint-box {
+      background: color-mix(in srgb, var(--data-3) 10%, var(--background));
+      border-left: var(--status-bar-width) solid var(--data-3);
+      border-radius: var(--rounded);
+      padding: var(--space-sm) var(--space-md);
+      font-size: 0.925rem;
+      color: var(--on-surface);
+    }
+
+    /* Options grid (Multiple Choice) */
+    .options-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+    }
+    .option-btn {
+      width: 100%;
+      min-height: 52px;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      border: 1.5px solid var(--outline-variant);
+      background: var(--background);
+      color: var(--on-surface);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      font-family: var(--font-en);
+      font-size: 1.025rem;
+      font-weight: 600;
+      transition: background-color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+    }
+    .option-btn:hover:not(:disabled) {
+      background: var(--surface-container-low);
+      border-color: var(--primary);
+    }
+    .option-btn:disabled {
+      cursor: default;
+    }
+    .option-letter {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--rounded-full);
+      background: var(--surface-container-low);
+      color: var(--on-surface-variant);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .option-btn.is-correct {
+      background: color-mix(in srgb, var(--tertiary) 12%, var(--background));
+      border-color: var(--tertiary);
+      color: var(--secondary);
+    }
+    .option-btn.is-correct .option-letter {
+      background: var(--tertiary);
+      color: var(--on-primary);
+    }
+    .option-btn.is-wrong {
+      background: color-mix(in srgb, var(--error) 10%, var(--background));
+      border-color: var(--error);
+      color: var(--error);
+    }
+    .option-btn.is-wrong .option-letter {
+      background: var(--error);
+      color: var(--on-error);
+    }
+    .option-status-icon {
+      margin-left: auto;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* Vocab Input Row */
+    .vocab-form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      gap: var(--space-sm);
+    }
+    .input-field-group {
+      flex: 1 1 220px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .text-input {
+      min-height: 48px;
+      padding: var(--space-sm) var(--space-md);
+      border: 1.5px solid var(--outline);
+      border-radius: var(--rounded);
+      background: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-en);
+      font-size: 1.125rem;
+      font-weight: 700;
+      width: 100%;
+    }
+    .text-input:focus {
+      border-color: var(--primary);
+    }
+    .text-input.is-correct {
+      border-color: var(--tertiary);
+      background: color-mix(in srgb, var(--tertiary) 8%, var(--background));
+      color: var(--secondary);
+    }
+    .text-input.is-wrong {
+      border-color: var(--error);
+      background: color-mix(in srgb, var(--error) 6%, var(--background));
+      color: var(--error);
+    }
+    .form-error-msg {
+      color: var(--error);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-top: var(--space-xs);
+    }
+
+    /* Feedback / Explanation Panel */
+    .feedback-panel {
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      border-left: var(--status-bar-width) solid var(--tertiary);
+      background: color-mix(in srgb, var(--tertiary) 10%, var(--background));
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      animation: fadeSlideUp var(--dur-short) var(--ease-out);
+    }
+    .feedback-panel[data-result="wrong"] {
+      border-left-color: var(--error);
+      background: color-mix(in srgb, var(--error) 8%, var(--background));
+    }
+    .feedback-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .feedback-header.ok { color: var(--secondary); }
+    .feedback-header.wrong { color: var(--error); }
+    .feedback-answer-line {
+      font-family: var(--font-en);
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+    .feedback-explain {
+      color: var(--on-surface);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Quiz Bottom Navigation */
+    .quiz-footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--outline-variant);
+    }
+
+    /* Sidebar Panel: Navigator & Stats */
+    .side-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    .side-card {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .side-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+
+    /* Question Grid Navigator */
+    .q-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+      gap: var(--space-xs);
+    }
+    .q-dot {
+      min-height: 44px;
+      min-width: 44px;
+      border-radius: var(--rounded);
+      border: 1px solid var(--outline-variant);
+      background: var(--background);
+      color: var(--on-surface-variant);
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 0.85rem;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+    }
+    .q-dot:hover {
+      background: var(--surface-container-low);
+      border-color: var(--primary);
+    }
+    .q-dot.is-correct {
+      background: color-mix(in srgb, var(--tertiary) 16%, var(--background));
+      border-color: var(--tertiary);
+      color: var(--secondary);
+    }
+    .q-dot.is-wrong {
+      background: color-mix(in srgb, var(--error) 12%, var(--background));
+      border-color: var(--error);
+      color: var(--error);
+    }
+    .q-dot.is-current {
+      box-shadow: 0 0 0 2px var(--primary);
+      border-color: var(--primary);
+      color: var(--on-surface);
+      font-weight: 800;
+    }
+
+    /* Mastery Progress Bars (with 80% target reference band) */
+    .stat-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .stat-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--space-sm);
+      font-size: 0.9rem;
+    }
+    .stat-name {
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+    .stat-nums {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--on-surface-variant);
+    }
+    .meter-track {
+      position: relative;
+      height: 12px;
+      border-radius: var(--rounded-full);
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      overflow: hidden;
+    }
+    /* Vitals Treatment #5: Target reference-range band (80%–100%) */
+    .meter-target-band {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 80%;
+      right: 0;
+      background: color-mix(in srgb, var(--tertiary) 18%, transparent);
+      border-left: 1.5px dashed var(--outline);
+      pointer-events: none;
+    }
+    .meter-fill {
+      height: 100%;
+      border-radius: var(--rounded-full);
+      background: var(--primary);
+      transition: width var(--dur-long) var(--ease-out);
+    }
+    .meter-fill.is-mastered {
+      background: var(--tertiary);
+    }
+
+    /* All-list view mode */
+    .list-view-stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    /* Empty State */
+    .empty-state {
+      background: var(--background);
+      border: var(--card-border);
+      border-left: var(--status-bar-width) solid var(--primary);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-xl) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-md);
+    }
+
+    /* Completion Banner */
+    .summary-banner {
+      background: var(--background);
+      border: var(--card-border);
+      border-left: var(--status-bar-width) solid var(--tertiary);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .summary-banner[data-level="review"] {
+      border-left-color: var(--data-3);
+    }
+
+    /* Source footer */
+    .source-footer {
+      border-top: 1px solid var(--outline-variant);
+      padding-top: var(--space-md);
+      color: var(--on-surface-variant);
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+
+    /* Container queries for internal card layout */
+    .card-container { container-type: inline-size; }
+    @container (min-width: 520px) {
+      .options-list.two-col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 900px) {
+      .workspace-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .page-grid {
+        padding: var(--space-md);
+        gap: var(--space-md);
+      }
+      .hero-header, .filter-panel, .quiz-card, .side-card {
+        padding: var(--space-md);
+      }
+      .vocab-form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .quiz-footer-nav {
+        gap: var(--space-sm);
+      }
+      .quiz-footer-nav .btn {
+        flex: 1 1 auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <main class="page-grid">
+
+      <!-- Header -->
+      <header class="hero-header">
+        <div class="header-top-row">
+          <div class="chip-row">
+            <span class="chip" data-status="info">Unit 3–4 含節慶篇</span>
+            <span class="chip" data-status="neutral">文意字彙・語法選擇・克漏字</span>
+          </div>
+          <span class="chip" id="save-status-chip">進度已自動儲存</span>
+        </div>
+        <div>
+          <h1 class="title">八年級英語定期評量互動測驗（第 1–3 回）</h1>
+          <p class="lede">免登入即可在手機或電腦直接作答。收錄三份模擬考共 96 題精選試題，涵蓋過去進行式、動名詞、不定詞與時間讀法，每題作答後立即批改並顯示重點解析。</p>
+        </div>
+      </header>
+
+      <!-- Live KPI Scoreboard -->
+      <section class="kpi-grid" aria-label="測驗即時統計">
+        <div class="status-card">
+          <span class="label-text">目前篩選範圍進度</span>
+          <div class="kpi-value" id="kpi-progress">0 / 96 題</div>
+          <span class="kpi-caption" id="kpi-progress-cap">尚未開始作答，點選下方題目即可練習</span>
+        </div>
+        <div class="status-card" data-status="ok">
+          <span class="label-text">答對題數與正確率</span>
+          <div class="kpi-value" id="kpi-correct">0 題（--%）</div>
+          <span class="kpi-caption" data-status="ok" id="kpi-correct-cap">目標達標線：80% 以上</span>
+        </div>
+        <div class="status-card" data-status="alert">
+          <span class="label-text">待訂正錯題（全卷累計）</span>
+          <div class="kpi-value" id="kpi-wrong">0 題</div>
+          <span class="kpi-caption" data-status="alert" id="kpi-wrong-cap">答錯題目會自動收錄供隨時複習</span>
+        </div>
+      </section>
+
+      <!-- Filter & Mode Bar -->
+      <section class="filter-panel" aria-label="測驗範圍與模式設定">
+        <div class="filter-row">
+          <div class="filter-group">
+            <span class="label-text" id="exam-filter-label">選擇模擬考回別</span>
+            <div class="segmented-controls" role="group" aria-labelledby="exam-filter-label">
+              <button type="button" class="seg-btn" id="exam-btn-all" aria-pressed="true" onclick="setExamFilter('all')">全部 3 回 (96)</button>
+              <button type="button" class="seg-btn" id="exam-btn-1" aria-pressed="false" onclick="setExamFilter('1')">第 1 回 (32)</button>
+              <button type="button" class="seg-btn" id="exam-btn-2" aria-pressed="false" onclick="setExamFilter('2')">第 2 回 (32)</button>
+              <button type="button" class="seg-btn" id="exam-btn-3" aria-pressed="false" onclick="setExamFilter('3')">第 3 回 (32)</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <span class="label-text" id="type-filter-label">選擇題型分類</span>
+            <div class="segmented-controls" role="group" aria-labelledby="type-filter-label">
+              <button type="button" class="seg-btn" id="type-btn-all" aria-pressed="true" onclick="setTypeFilter('all')">全部題型</button>
+              <button type="button" class="seg-btn" id="type-btn-vocab" aria-pressed="false" onclick="setTypeFilter('vocab')">文意字彙</button>
+              <button type="button" class="seg-btn" id="type-btn-grammar" aria-pressed="false" onclick="setTypeFilter('grammar')">語法選擇</button>
+              <button type="button" class="seg-btn" id="type-btn-cloze" aria-pressed="false" onclick="setTypeFilter('cloze')">克漏字</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <div class="action-row">
+            <button type="button" class="seg-btn" id="btn-only-wrong" aria-pressed="false" onclick="toggleWrongOnly()">
+              只練習錯題 (<span id="wrong-filter-count">0</span>)
+            </button>
+            <button type="button" class="seg-btn" id="btn-view-mode" aria-pressed="false" onclick="toggleViewMode()">
+              切換為全卷列表檢視
+            </button>
+          </div>
+          <div class="action-row">
+            <button type="button" class="btn btn-ghost" id="btn-export-wrong" onclick="exportWrongNotes()" disabled>
+              匯出錯題解析 (.txt)
+            </button>
+            <button type="button" class="btn btn-danger-outline" id="btn-reset-scope" onclick="handleResetScope(this)">
+              重新測驗目前範圍
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Completion Banner (visible when current filtered set is 100% answered) -->
+      <section id="completion-banner" class="summary-banner" hidden aria-live="polite"></section>
+
+      <!-- Main Interactive Workspace -->
+      <section class="workspace-grid">
+        <!-- Left: Active Quiz Area -->
+        <div id="quiz-main-area" class="card-container"></div>
+
+        <!-- Right: Question Navigator & Category Breakdown -->
+        <aside class="side-stack" aria-label="題號導覽與各科掌握度">
+          <div class="side-card">
+            <div class="side-card-head">
+              <h2 class="section-title">題號快速跳轉</h2>
+              <span class="label-text" id="nav-count-label">共 96 題</span>
+            </div>
+            <div class="chip-row">
+              <span class="chip">綠：答對</span>
+              <span class="chip" data-status="alert">紅：答錯</span>
+              <span class="chip" data-status="neutral">白：未作答</span>
+            </div>
+            <div class="q-nav-grid" id="q-nav-grid"></div>
+          </div>
+
+          <div class="side-card">
+            <div class="side-card-head">
+              <h2 class="section-title">題型掌握度統計</h2>
+              <span class="label-text">虛線為 80% 目標線</span>
+            </div>
+            <div class="stat-list" id="category-stats-list"></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Source Credit Footer -->
+      <footer class="source-footer">
+        <span>試題來源：高雄市立苓雅國民中學 115 學年度第一學期二年級第二次定期評量英語科模擬試題卷（第 1–3 回）</span>
+        <span>範圍：Unit 3～Unit 4 含節慶篇（文意字彙・語法選擇・克漏字）</span>
+      </footer>
+
+    </main>
+  </div>
+
+  <api-shim></api-shim>
+  <script>
+    // =========================================================================
+    // 1. QUESTION BANK (96 Questions from Mock Exams 1, 2, and 3)
+    //    All string literals use backticks to avoid apostrophe syntax errors.
+    // =========================================================================
+    const PASSAGES = {
+      'e1_A': `Yesterday afternoon, the Lin family were all busy at home. At three fifteen, Mr. Lin ___16___ the windows in the living room. Mrs. Lin was busy in the kitchen. What was their son, Billy, doing? He ___17___ the floor with a broom. When Grandma walked in, everyone stopped ___18___ hello to her.`,
+      'e1_B': `Ken is a junior high student. He wants to be a successful chef in the future because he loves ___19___ delicious dishes. He usually practices ___20___ different recipes on weekends. Although working in a hot kitchen is not easy, Ken never plans to ___21___. He believes that ___22___ hard will make his dream come true one day!`,
+      'e2_A': `Yesterday was Sunday. The Wu family stayed home and cleaned up their house all morning. At 9:30, Mr. Wu ___16___ the cars in front of the house. Mrs. Wu was in the yard; she was hanging the clothes. What was their daughter, Kelly, doing at that time? She was sweeping the floor when her brother ___17___ into her room. At noon, they stopped working and sat down ___18___ pizza together.`,
+      'e2_B': `Cathy came from a poor family, but she had a big dream. She loved singing and wanted ___19___ a famous singer one day. Before she became famous, she worked as a waitress at a restaurant to help her family. Her life was hard, but she never thought about ___20___. She kept ___21___ songs every day after work. Finally, she won first prize in a nationwide singing contest. ___22___ hard made her dream come true!`,
+      'e3_A': `Yesterday afternoon was a busy house-cleaning day for the Lee family. At 3:30, Mr. Lee ___16___ the cars outside. Mrs. Lee was in the kitchen; she was doing the dishes. What was their son, Jason, doing? He was sweeping the floor when his dog ___17___ into the room. At four o'clock, they stopped working ___18___ some tea and cake together.`,
+      'e3_B': `Ken wants to be a successful chef in the future. He loves ___19___ new dishes for his family. Although working in a hot kitchen is tiring, he never plans to ___20___. He keeps ___21___ every weekend. He believes that ___22___ hard will help him open his own restaurant one day.`
+    };
+
+    const QUESTIONS = [
+      // ==================== 第 1 回 ====================
+      // 一、文意字彙 (1-10)
+      {
+        id: `e1_v1`, exam: `1`, type: `vocab`, num: 1, topic: `職業名詞`,
+        prompt: `Ian had a serious toothache, so his mother took him to see a d______t.`,
+        blankToken: `d______t`, hint: `名詞：牙醫（提示：toothache 牙痛）`,
+        answer: `dentist`,
+        explain: `由「serious toothache（嚴重牙痛）」可知是去看牙醫 dentist。`
+      },
+      {
+        id: `e1_v2`, exam: `1`, type: `vocab`, num: 2, topic: `節慶字彙`,
+        prompt: `Alex plans to cut out eyes and a mouth on the p______n to make a jack-o’-lantern.`,
+        blankToken: `p______n`, hint: `名詞：南瓜（萬聖節做南瓜燈）`,
+        answer: `pumpkin`,
+        explain: `製作萬聖節傑克南瓜燈（jack-o’-lantern）需要用到南瓜 pumpkin。`
+      },
+      {
+        id: `e1_v3`, exam: `1`, type: `vocab`, num: 3, topic: `動詞片語`,
+        prompt: `Turn off the lights and lock the door when you l______e the classroom.`,
+        blankToken: `l______e`, hint: `動詞：離開`,
+        answer: `leave`,
+        explain: `離開教室（leave the classroom）時要隨手關燈並鎖門。`
+      },
+      {
+        id: `e1_v4`, exam: `1`, type: `vocab`, num: 4, topic: `職業名詞`,
+        prompt: `Cathy is a helpful s______y; she always makes phone calls and arranges schedules for her boss.`,
+        blankToken: `s______y`, hint: `名詞：秘書`,
+        answer: `secretary`,
+        explain: `幫老闆接聽電話、安排行程的工作是秘書 secretary。`
+      },
+      {
+        id: `e1_v5`, exam: `1`, type: `vocab`, num: 5, topic: `生活字彙`,
+        prompt: `It was a wonderful m______t when our school team won first place in the basketball game.`,
+        blankToken: `m______t`, hint: `名詞：時刻、瞬間`,
+        answer: `moment`,
+        explain: `贏得籃球比賽第一名的那一刻是個美好的「時刻」moment。`
+      },
+      {
+        id: `e1_v6`, exam: `1`, type: `vocab`, num: 6, topic: `動作動詞`,
+        prompt: `Be careful with the glass. Don’t b______k it!`,
+        blankToken: `b______k`, hint: `動詞：打破`,
+        answer: `break`,
+        explain: `小心玻璃杯，別「打破（break）」它。`
+      },
+      {
+        id: `e1_v7`, exam: `1`, type: `vocab`, num: 7, topic: `形容詞`,
+        prompt: `J. K. Rowling worked hard for years and finally became a s______l writer.`,
+        blankToken: `s______l`, hint: `形容詞：成功的`,
+        answer: `successful`,
+        explain: `努力多年後成為一名「成功的（successful）」作家。`
+      },
+      {
+        id: `e1_v8`, exam: `1`, type: `vocab`, num: 8, topic: `家事名詞`,
+        prompt: `Please use the mop to clean up the dirty water on the living room f______r.`,
+        blankToken: `f______r`, hint: `名詞：地板`,
+        answer: `floor`,
+        explain: `用拖把（mop）清理客廳「地板（floor）」上的髒水。`
+      },
+      {
+        id: `e1_v9`, exam: `1`, type: `vocab`, num: 9, topic: `職業名詞`,
+        prompt: `Cody wants to study law in the future because he hopes to become a l______r to fight for people's rights.`,
+        blankToken: `l______r`, hint: `名詞：律師（提示：study law 研讀法律）`,
+        answer: `lawyer`,
+        explain: `想讀法律（law）並為人們爭取權利（fight for people's rights），志向是成為律師 lawyer。`
+      },
+      {
+        id: `e1_v10`, exam: `1`, type: `vocab`, num: 10, topic: `慣用語`,
+        prompt: `Lily was so nervous before the speech contest that she got b______s in her stomach.`,
+        blankToken: `b______s`, hint: `複數名詞：蝴蝶（慣用語：緊張不安）`,
+        answer: `butterflies`,
+        explain: `慣用語 have / get butterflies in one's stomach 意為「緊張得七上八下」，需用複數 butterflies。`
+      },
+
+      // 二、語法選擇 (1-15)
+      {
+        id: `e1_g1`, exam: `1`, type: `grammar`, num: 1, topic: `過去進行式`,
+        prompt: `Tom ______ the dishes in the kitchen at half past eight last night.`,
+        options: [`did`, `does`, `was doing`, `is doing`],
+        answer: `C`,
+        explain: `由時間副詞「at half past eight last night（昨晚八點半）」明確指過去特定時間點正在進行的動作，應選過去進行式 was doing。`
+      },
+      {
+        id: `e1_g2`, exam: `1`, type: `grammar`, num: 2, topic: `過去進行式`,
+        prompt: `Dad ______ me math when my sister suddenly came home.`,
+        options: [`taught`, `was teaching`, `teaches`, `is teaching`],
+        answer: `B`,
+        explain: `「when my sister suddenly came home」為過去的瞬間動作點，表示當時爸爸「正在」教數學，主要子句用過去進行式 was teaching。`
+      },
+      {
+        id: `e1_g3`, exam: `1`, type: `grammar`, num: 3, topic: `時間讀法`,
+        prompt: `Gary: What time is it now?　Lily: It is 7:45. That is to say, it is ______.`,
+        options: [`a quarter to eight`, `a quarter past seven`, `half past seven`, `fifteen to seven`],
+        answer: `A`,
+        explain: `7:45 換算為逆讀法表示「差一刻八點」，即 a quarter to eight。`
+      },
+      {
+        id: `e1_g4`, exam: `1`, type: `grammar`, num: 4, topic: `過去進行式`,
+        prompt: `Many people were sleeping soundly when the earthquake ______ on September 21.`,
+        options: [`happens`, `was happening`, `happened`, `is happening`],
+        answer: `C`,
+        explain: `地震發生（happen）屬於過去的瞬間動作，搭配前面正在熟睡（were sleeping），when 子句用簡單過去式 happened。`
+      },
+      {
+        id: `e1_g5`, exam: `1`, type: `grammar`, num: 5, topic: `不定詞`,
+        prompt: `To learn English well, Daniel decided ______ the school English club.`,
+        options: [`join`, `to join`, `joining`, `joined`],
+        answer: `B`,
+        explain: `動詞 decide 後方須接不定詞（to + V）作受詞，decide to join 表示「決定加入」。`
+      },
+      {
+        id: `e1_g6`, exam: `1`, type: `grammar`, num: 6, topic: `動名詞`,
+        prompt: `May couldn't find her smartphone, so she kept ______ for it all afternoon.`,
+        options: [`looking`, `to look`, `looked`, `looks`],
+        answer: `A`,
+        explain: `動詞 keep 後方接動名詞（V-ing），keep looking for... 表示「持續尋找……」。`
+      },
+      {
+        id: `e1_g7`, exam: `1`, type: `grammar`, num: 7, topic: `動名詞`,
+        prompt: `Allen enjoys ______ dinner for his family in his free time.`,
+        options: [`cook`, `to cook`, `cooked`, `cooking`],
+        answer: `D`,
+        explain: `動詞 enjoy 後方只能接動名詞（V-ing）作受詞，故選 cooking。`
+      },
+      {
+        id: `e1_g8`, exam: `1`, type: `grammar`, num: 8, topic: `動名詞當主詞`,
+        prompt: `______ healthy food and exercising regularly help you keep in good shape.`,
+        options: [`Eat`, `Ate`, `Eating`, `To eating`],
+        answer: `C`,
+        explain: `動名詞片語 Eating healthy food 與後方的 exercising regularly 對等並用，一起當作句子的主詞（因為是兩件事以 and 連接，故後面動詞用複數 help）。`
+      },
+      {
+        id: `e1_g9`, exam: `1`, type: `grammar`, num: 9, topic: `日常對話`,
+        prompt: `Nick: I have three tests tomorrow, but I haven't finished studying!　Mom: ______! Take a deep breath and do your best.`,
+        options: [`Take it easy`, `Give it up`, `How interesting`, `You bet`],
+        answer: `A`,
+        explain: `孩子面對考試感到焦慮時，媽媽鼓勵「Take it easy!（放輕鬆／別緊張）」，深呼吸並盡力而為。`
+      },
+      {
+        id: `e1_g10`, exam: `1`, type: `grammar`, num: 10, topic: `虛主詞 It`,
+        prompt: `______ difficult for Yuki to sing in front of a large crowd.`,
+        options: [`That is`, `It is`, `There is`, `She is`],
+        answer: `B`,
+        explain: `虛主詞固定句型：It is + 形容詞 + for sb + to V，以 It 代替真正主詞 to sing in front of a large crowd。`
+      },
+      {
+        id: `e1_g11`, exam: `1`, type: `grammar`, num: 11, topic: `過去進行式`,
+        prompt: `Mr. Wilson wasn't reading newspapers at 3:00 yesterday afternoon, but his children ______.`,
+        options: [`were`, `was`, `did`, `are`],
+        answer: `A`,
+        explain: `but 連接前後語氣轉折，主詞 his children 為複數，表示「昨天下午三點正在看報紙」，過去進行式肯定簡答用 were。`
+      },
+      {
+        id: `e1_g12`, exam: `1`, type: `grammar`, num: 12, topic: `過去進行式`,
+        prompt: `Jeff: Were you sleepwalking when you broke the mug?　Kim: ______`,
+        options: [`Yes, I was.`, `No, I didn't.`, `Yes, I did.`, `No, I'm not.`],
+        answer: `A`,
+        explain: `過去進行式疑問句「Were you...?」，答句需以過去式 be 動詞 was / wasn't 回應，故選 Yes, I was.。`
+      },
+      {
+        id: `e1_g13`, exam: `1`, type: `grammar`, num: 13, topic: `不定詞`,
+        prompt: `Hank is a food delivery driver. He needs ______ lunch to busy office workers every day.`,
+        options: [`deliver`, `to deliver`, `delivering`, `delivered`],
+        answer: `B`,
+        explain: `動詞 need 後接不定詞 to V，need to deliver 表「需要外送」。`
+      },
+      {
+        id: `e1_g14`, exam: `1`, type: `grammar`, num: 14, topic: `動名詞當主詞`,
+        prompt: `Swimming and playing basketball ______ my brother's favorite sports.`,
+        options: [`is`, `are`, `to be`, `being`],
+        answer: `B`,
+        explain: `Swimming 和 playing basketball 為兩項不同的運動，以 and 連接作主詞視為複數，be 動詞選 are。`
+      },
+      {
+        id: `e1_g15`, exam: `1`, type: `grammar`, num: 15, topic: `動名詞與不定詞辨析`,
+        prompt: `The movie starts in ten minutes, so we should stop ______ and go into the theater.`,
+        options: [`talking`, `to talk`, `talked`, `to talking`],
+        answer: `A`,
+        explain: `stop talking 表「停止說話這項動作」；stop to talk 則為「停下手邊的事去講話」。依題意準備進戲院應選停止說話 talking。`
+      },
+
+      // 三、克漏字測驗 (16-22)
+      {
+        id: `e1_c16`, exam: `1`, type: `cloze`, num: 16, topic: `克漏字・過去進行式`, passageId: `e1_A`, blankNum: 16,
+        prompt: `請依題組 A 文意選出第 16 格最適當的答案：`,
+        options: [`wipes`, `was wiping`, `is wiping`, `wiped`],
+        answer: `B`,
+        explain: `由「Yesterday afternoon」與「At three fifteen（在三點十五分）」明確指過去特定時間點正在進行的動作，用過去進行式 was wiping。`
+      },
+      {
+        id: `e1_c17`, exam: `1`, type: `cloze`, num: 17, topic: `克漏字・過去進行式`, passageId: `e1_A`, blankNum: 17,
+        prompt: `請依題組 A 文意選出第 17 格最適當的答案：`,
+        options: [`sweeps`, `is sweeping`, `was sweeping`, `swept`],
+        answer: `C`,
+        explain: `承接前一句問句「What was their son, Billy, doing?」，回答當時正在掃地，用過去進行式 was sweeping。`
+      },
+      {
+        id: `e1_c18`, exam: `1`, type: `cloze`, num: 18, topic: `克漏字・不定詞`, passageId: `e1_A`, blankNum: 18,
+        prompt: `請依題組 A 文意選出第 18 格最適當的答案：`,
+        options: [`to say`, `saying`, `said`, `say`],
+        answer: `A`,
+        explain: `奶奶走進來時，大家「停下手邊的事去跟她問好」，表示停下來去做另一件事用 stop + to V（to say）。`
+      },
+      {
+        id: `e1_c19`, exam: `1`, type: `cloze`, num: 19, topic: `克漏字・動名詞`, passageId: `e1_B`, blankNum: 19,
+        prompt: `請依題組 B 文意選出第 19 格最適當的答案：`,
+        options: [`make`, `to make`, `making`, `made`],
+        answer: `C`,
+        explain: `本單元聚焦動名詞用法，love 後接動名詞 V-ing 作受詞（參考解答為 C. making）。`
+      },
+      {
+        id: `e1_c20`, exam: `1`, type: `cloze`, num: 20, topic: `克漏字・動名詞`, passageId: `e1_B`, blankNum: 20,
+        prompt: `請依題組 B 文意選出第 20 格最適當的答案：`,
+        options: [`cook`, `cooking`, `to cook`, `cooked`],
+        answer: `B`,
+        explain: `動詞 practice 後方必須接動名詞（V-ing），不可接不定詞，故選 cooking。`
+      },
+      {
+        id: `e1_c21`, exam: `1`, type: `cloze`, num: 21, topic: `克漏字・動詞片語`, passageId: `e1_B`, blankNum: 21,
+        prompt: `請依題組 B 文意選出第 21 格最適當的答案：`,
+        options: [`wake up`, `give up`, `cool down`, `break down`],
+        answer: `B`,
+        explain: `依上下文「雖然在悶熱廚房工作不容易，但 Ken 從未打算放棄（give up）」。`
+      },
+      {
+        id: `e1_c22`, exam: `1`, type: `cloze`, num: 22, topic: `克漏字・動名詞當主詞`, passageId: `e1_B`, blankNum: 22,
+        prompt: `請依題組 B 文意選出第 22 格最適當的答案：`,
+        options: [`work`, `worked`, `works`, `working`],
+        answer: `D`,
+        explain: `that 引導的子句中缺少主詞，須使用動名詞 working hard（努力工作）當作主詞。`
+      },
+
+      // ==================== 第 2 回 ====================
+      // 一、文意字彙 (1-10)
+      {
+        id: `e2_v1`, exam: `2`, type: `vocab`, num: 1, topic: `形容詞片語`,
+        prompt: `Be quiet and don’t make a noise; Grandpa usually falls a______p when he sits on the sofa.`,
+        blankToken: `a______p`, hint: `形容詞：睡著的（片語 fall asleep）`,
+        answer: `asleep`,
+        explain: `fall asleep 為固定片語，意為「入睡、睡著」。`
+      },
+      {
+        id: `e2_v2`, exam: `2`, type: `vocab`, num: 2, topic: `生活名詞`,
+        prompt: `My sister likes to put her favorite pens, rulers, and diaries in her d______r.`,
+        blankToken: `d______r`, hint: `名詞：抽屜`,
+        answer: `drawer`,
+        explain: `把文具與日記放進書桌的「抽屜（drawer）」裡。`
+      },
+      {
+        id: `e2_v3`, exam: `2`, type: `vocab`, num: 3, topic: `名詞`,
+        prompt: `The brave soldier was willing to fight for his c______y.`,
+        blankToken: `c______y`, hint: `名詞：國家`,
+        answer: `country`,
+        explain: `勇敢的士兵願意為他的「國家（country）」而戰。`
+      },
+      {
+        id: `e2_v4`, exam: `2`, type: `vocab`, num: 4, topic: `不定代名詞`,
+        prompt: `It’s dark outside and I can’t see a______g clearly on the road.`,
+        blankToken: `a______g`, hint: `代名詞：任何事物（用於否定句）`,
+        answer: `anything`,
+        explain: `否定句 can't see 中表達「任何事物」應使用 anything。`
+      },
+      {
+        id: `e2_v5`, exam: `2`, type: `vocab`, num: 5, topic: `職業名詞`,
+        prompt: `Mail c______rs work hard outside every day to deliver letters and postcards to people.`,
+        blankToken: `c______rs`, hint: `複數名詞：郵差（mail carriers）`,
+        answer: `carriers`,
+        explain: `遞送信件和明信片的是郵差 mail carrier；後方動詞 work 為原形複數，故填複數 carriers。`
+      },
+      {
+        id: `e2_v6`, exam: `2`, type: `vocab`, num: 6, topic: `情緒形容詞`,
+        prompt: `A dog was chasing Kevin down the street, so he felt very s______d.`,
+        blankToken: `s______d`, hint: `形容詞：感到害怕的`,
+        answer: `scared`,
+        explain: `被狗沿街追趕，所以他感到非常「害怕（scared）」。`
+      },
+      {
+        id: `e2_v7`, exam: `2`, type: `vocab`, num: 7, topic: `節慶動詞`,
+        prompt: `Remember to c______k out eyes, a nose, and a mouth on the pumpkin to make a jack-o’-lantern.`,
+        blankToken: `c______k`, hint: `動詞：切、割（cut out 挖出；原卷拼字提示為 c______k）`,
+        answer: `cut`,
+        explain: `cut out 意為「切出、挖出」，在南瓜上挖出眼睛、鼻子和嘴巴來製作南瓜燈。（註：原模擬卷印刷作 c______k，標準參考答案為 cut）`
+      },
+      {
+        id: `e2_v8`, exam: `2`, type: `vocab`, num: 8, topic: `家事動詞`,
+        prompt: `Mr. Wu asked the students to s______p the stairs first and then mop them.`,
+        blankToken: `s______p`, hint: `動詞：清掃`,
+        answer: `sweep`,
+        explain: `先「掃（sweep）」樓梯，再拖（mop）樓梯。`
+      },
+      {
+        id: `e2_v9`, exam: `2`, type: `vocab`, num: 9, topic: `副詞`,
+        prompt: `After practicing for many months, Cindy f______y won first place in the speech contest.`,
+        blankToken: `f______y`, hint: `副詞：終於、最後`,
+        answer: `finally`,
+        explain: `練習好幾個月後，Cindy「終於（finally）」贏得演講比賽第一名。`
+      },
+      {
+        id: `e2_v10`, exam: `2`, type: `vocab`, num: 10, topic: `動詞片語`,
+        prompt: `Don't w______y about me, Mom. I can take good care of myself.`,
+        blankToken: `w______y`, hint: `動詞：擔心（worry about）`,
+        answer: `worry`,
+        explain: `worry about 意為「擔心……」，祈使句否定 Don't 後接原形動詞 worry。`
+      },
+
+      // 二、語法選擇 (1-15)
+      {
+        id: `e2_g1`, exam: `2`, type: `grammar`, num: 1, topic: `過去進行式`,
+        prompt: `Ivy ______ out the trash when the earthquake happened last night.`,
+        options: [`takes`, `took`, `is taking`, `was taking`],
+        answer: `D`,
+        explain: `「when the earthquake happened」表示地震發生的過去時間點，當時正在倒垃圾用過去進行式 was taking。`
+      },
+      {
+        id: `e2_g2`, exam: `2`, type: `grammar`, num: 2, topic: `時間讀法`,
+        prompt: `Gary: What time is the movie?　Lily: It is at 9:30. In other words, it starts at ______.`,
+        options: [`thirty to ten`, `half past nine`, `half to nine`, `a quarter to nine`],
+        answer: `B`,
+        explain: `9:30 表示「九點半」，英文讀法為 half past nine（半點不用 to，一律用 half past）。`
+      },
+      {
+        id: `e2_g3`, exam: `2`, type: `grammar`, num: 3, topic: `過去進行式`,
+        prompt: `When the teacher walked into the classroom, the students ______ loudly to each other.`,
+        options: [`were talking`, `are talking`, `talked`, `talk`],
+        answer: `A`,
+        explain: `老師走進教室時（過去時間點），學生們正在大聲聊天，複數主詞 the students 搭配 were talking。`
+      },
+      {
+        id: `e2_g4`, exam: `2`, type: `grammar`, num: 4, topic: `動名詞`,
+        prompt: `After Billy finished ______ his room, he sat down to read a comic book.`,
+        options: [`cleaning`, `to clean`, `clean`, `cleaned`],
+        answer: `A`,
+        explain: `動詞 finish 後方必須接動名詞（V-ing）作受詞，表示完成某件事，故選 cleaning。`
+      },
+      {
+        id: `e2_g5`, exam: `2`, type: `grammar`, num: 5, topic: `虛主詞 It`,
+        prompt: `______ is not easy for young students to get up at five in the morning.`,
+        options: [`That`, `This`, `It`, `There`],
+        answer: `C`,
+        explain: `虛主詞句型：It is (not) + 形容詞 + for sb + to V，不可用 That 或 This 代替。`
+      },
+      {
+        id: `e2_g6`, exam: `2`, type: `grammar`, num: 6, topic: `動名詞`,
+        prompt: `Mrs. Lin kept ______ the kitchen floor until it was completely clean.`,
+        options: [`to mop`, `mopping`, `mopped`, `mop`],
+        answer: `B`,
+        explain: `動詞 keep 後須接動名詞（V-ing），表示「持續擦拖地板」，故選 mopping。`
+      },
+      {
+        id: `e2_g7`, exam: `2`, type: `grammar`, num: 7, topic: `過去進行式`,
+        prompt: `Jeff: Were you playing video games at 8:00 yesterday evening?　Mary: ______ I was doing my English homework then.`,
+        options: [`Yes, I was.`, `No, I didn’t.`, `No, I wasn’t.`, `Yes, I did.`],
+        answer: `C`,
+        explain: `後句說明當時在做英文作業，故為否定；且問句為 Were you...?，回答應使用 wasn't。`
+      },
+      {
+        id: `e2_g8`, exam: `2`, type: `grammar`, num: 8, topic: `動名詞當主詞`,
+        prompt: `Swimming and jogging in the park ______ great ways to stay healthy.`,
+        options: [`is`, `are`, `being`, `to be`],
+        answer: `B`,
+        explain: `Swimming 和 jogging 兩項活動以 and 連接當主詞視為複數，be 動詞選 are。`
+      },
+      {
+        id: `e2_g9`, exam: `2`, type: `grammar`, num: 9, topic: `日常對話`,
+        prompt: `Steve: Hurry up! The train will arrive in ten minutes!　David: ______! We are already at the station platform.`,
+        options: [`Give it up`, `Take it easy`, `Cool down`, `What for`],
+        answer: `B`,
+        explain: `David 回應已經在車站月台上了，要對方別緊張、放輕鬆，故選 Take it easy!。`
+      },
+      {
+        id: `e2_g10`, exam: `2`, type: `grammar`, num: 10, topic: `動名詞與不定詞辨析`,
+        prompt: `The music from the radio was so beautiful that everyone stopped ______ to it.`,
+        options: [`listening`, `to listen`, `listen`, `listened`],
+        answer: `B`,
+        explain: `「stop to listen」表示停下原本進行的事，轉而去聆聽優美的音樂；若用 listening 則是「停止聽音樂」。`
+      },
+      {
+        id: `e2_g11`, exam: `2`, type: `grammar`, num: 11, topic: `動名詞／分詞`,
+        prompt: `I am sorry to keep you ______ outside in the cold rain for half an hour.`,
+        options: [`wait`, `to wait`, `waiting`, `waited`],
+        answer: `C`,
+        explain: `固定用法 keep + sb + V-ing 表示「讓某人一直處於某狀態（讓你在冷雨中一直等）」。`
+      },
+      {
+        id: `e2_g12`, exam: `2`, type: `grammar`, num: 12, topic: `不定詞`,
+        prompt: `Sandy hopes ______ a professional veterinarian (vet) to treat sick animals.`,
+        options: [`become`, `to become`, `becoming`, `became`],
+        answer: `B`,
+        explain: `動詞 hope 後接不定詞（to + V）作受詞，hope to become 表示「希望成為」。`
+      },
+      {
+        id: `e2_g13`, exam: `2`, type: `grammar`, num: 13, topic: `過去進行式`,
+        prompt: `They were wiping the windows then, but I ______.`,
+        options: [`didn’t`, `am not`, `wasn’t`, `don’t`],
+        answer: `C`,
+        explain: `由前句「were wiping... then（那時正在擦窗戶）」與對比連接詞 but 可知，主詞 I 接過去進行式否定簡答 wasn't。`
+      },
+      {
+        id: `e2_g14`, exam: `2`, type: `grammar`, num: 14, topic: `時間讀法`,
+        prompt: `What time does the clock show? "It's 1:45." That means it is ______.`,
+        options: [`a quarter past one`, `a quarter to two`, `half past one`, `fifteen after two`],
+        answer: `B`,
+        explain: `1:45 為差一刻兩點，逆讀法為 a quarter to two。`
+      },
+      {
+        id: `e2_g15`, exam: `2`, type: `grammar`, num: 15, topic: `動名詞當主詞`,
+        prompt: `______ a little English every day helps students speak more fluently.`,
+        options: [`Practicing`, `Practice`, `Practiced`, `To practicing`],
+        answer: `A`,
+        explain: `單一動名詞片語 Practicing a little English every day 放句首當主詞，視為第三人稱單數，搭配單數動詞 helps。`
+      },
+
+      // 三、克漏字測驗 (16-22)
+      {
+        id: `e2_c16`, exam: `2`, type: `cloze`, num: 16, topic: `克漏字・過去進行式`, passageId: `e2_A`, blankNum: 16,
+        prompt: `請依題組 A 文意選出第 16 格最適當的答案：`,
+        options: [`washes`, `was washing`, `is washing`, `washed`],
+        answer: `B`,
+        explain: `由「Yesterday was Sunday」及特定時間點「At 9:30」可知當時正在洗車，用過去進行式 was washing。`
+      },
+      {
+        id: `e2_c17`, exam: `2`, type: `cloze`, num: 17, topic: `克漏字・過去簡單式`, passageId: `e2_A`, blankNum: 17,
+        prompt: `請依題組 A 文意選出第 17 格最適當的答案：`,
+        options: [`walks`, `was walking`, `walked`, `is walking`],
+        answer: `C`,
+        explain: `when 引導的瞬間動作「弟弟走進房間」，搭配前句過去進行式 was sweeping，選簡單過去式 walked。`
+      },
+      {
+        id: `e2_c18`, exam: `2`, type: `cloze`, num: 18, topic: `克漏字・不定詞`, passageId: `e2_A`, blankNum: 18,
+        prompt: `請依題組 A 文意選出第 18 格最適當的答案：`,
+        options: [`having`, `have`, `had`, `to have`],
+        answer: `D`,
+        explain: `sat down to have pizza 表示「坐下來去吃披薩」，表達目的應使用不定詞 to have。`
+      },
+      {
+        id: `e2_c19`, exam: `2`, type: `cloze`, num: 19, topic: `克漏字・不定詞`, passageId: `e2_B`, blankNum: 19,
+        prompt: `請依題組 B 文意選出第 19 格最適當的答案：`,
+        options: [`be`, `to be`, `being`, `been`],
+        answer: `B`,
+        explain: `動詞 want 後接不定詞（to + V），want to be 表示「想成為」。`
+      },
+      {
+        id: `e2_c20`, exam: `2`, type: `cloze`, num: 20, topic: `克漏字・介系詞與動名詞`, passageId: `e2_B`, blankNum: 20,
+        prompt: `請依題組 B 文意選出第 20 格最適當的答案：`,
+        options: [`giving up`, `to give up`, `give up`, `gave up`],
+        answer: `A`,
+        explain: `介系詞 about 後方動詞須改為動名詞（V-ing），never thought about giving up 表「從未想過放棄」。`
+      },
+      {
+        id: `e2_c21`, exam: `2`, type: `cloze`, num: 21, topic: `克漏字・動名詞`, passageId: `e2_B`, blankNum: 21,
+        prompt: `請依題組 B 文意選出第 21 格最適當的答案：`,
+        options: [`practice`, `to practice`, `practicing`, `practiced`],
+        answer: `C`,
+        explain: `動詞 keep 後接動名詞（V-ing），kept practicing 表示「持續練習」。`
+      },
+      {
+        id: `e2_c22`, exam: `2`, type: `cloze`, num: 22, topic: `克漏字・動名詞當主詞`, passageId: `e2_B`, blankNum: 22,
+        prompt: `請依題組 B 文意選出第 22 格最適當的答案：`,
+        options: [`Working`, `Work`, `Worked`, `Works`],
+        answer: `A`,
+        explain: `動詞置於句首當主詞時須使用動名詞形式，Working hard made her dream come true!。`
+      },
+
+      // ==================== 第 3 回 ====================
+      // 一、文意字彙 (1-10)
+      {
+        id: `e3_v1`, exam: `3`, type: `vocab`, num: 1, topic: `職業名詞`,
+        prompt: `Lily is a successful s______y; she always arranges meetings and takes calls for her boss.`,
+        blankToken: `s______y`, hint: `名詞：秘書`,
+        answer: `secretary`,
+        explain: `arrange meetings（安排會議）與 take calls（接聽電話）為秘書 secretary 的職責。`
+      },
+      {
+        id: `e3_v2`, exam: `3`, type: `vocab`, num: 2, topic: `節慶動詞`,
+        prompt: `In the past, people c______ted scary faces on pumpkins to scare bad ghosts away.`,
+        blankToken: `c______ted`, hint: `過去式動詞：雕刻（carved；原卷拼字提示為 c______ted）`,
+        answer: `carved`,
+        explain: `carve out scary faces on pumpkins 為萬聖節雕刻南瓜燈的習俗；由 In the past 可知用過去式 carved。（註：原模擬卷印刷作 c______ted，標準參考答案為 carved）`
+      },
+      {
+        id: `e3_v3`, exam: `3`, type: `vocab`, num: 3, topic: `片語動詞`,
+        prompt: `Don't be nervous. Take a deep breath and t______e it easy!`,
+        blankToken: `t______e`, hint: `動詞：放輕鬆（take it easy）`,
+        answer: `take`,
+        explain: `片語 take it easy 表「放輕鬆、別緊張」。`
+      },
+      {
+        id: `e3_v4`, exam: `3`, type: `vocab`, num: 4, topic: `家事動詞`,
+        prompt: `Dad is using a broom to s______p the dirty steps outside the house.`,
+        blankToken: `s______p`, hint: `動詞：清掃`,
+        answer: `sweep`,
+        explain: `用掃帚（broom）清掃（sweep）屋外的髒階梯（steps）。`
+      },
+      {
+        id: `e3_v5`, exam: `3`, type: `vocab`, num: 5, topic: `形容詞片語`,
+        prompt: `Hank is so tired after working all day that he fell a______p on the couch.`,
+        blankToken: `a______p`, hint: `形容詞：睡著的（fall asleep）`,
+        answer: `asleep`,
+        explain: `fall asleep 表「入睡、睡著」。`
+      },
+      {
+        id: `e3_v6`, exam: `3`, type: `vocab`, num: 6, topic: `過去式動詞片語`,
+        prompt: `A dog b______k into our yard and chased my cat away yesterday afternoon.`,
+        blankToken: `b______k`, hint: `過去式動詞：闖入（break 的過去式；原卷拼字提示為 b______k）`,
+        answer: `broke`,
+        explain: `片語 break into（闖入），由時間副詞 yesterday afternoon 可知動詞須用過去式 broke。（註：原模擬卷印刷作 b______k，標準參考答案為 broke）`
+      },
+      {
+        id: `e3_v7`, exam: `3`, type: `vocab`, num: 7, topic: `職業名詞`,
+        prompt: `Lucy had a bad toothache, so she made an appointment to see the d______t.`,
+        blankToken: `d______t`, hint: `名詞：牙醫`,
+        answer: `dentist`,
+        explain: `toothache（牙痛）需要預約看牙醫 dentist。`
+      },
+      {
+        id: `e3_v8`, exam: `3`, type: `vocab`, num: 8, topic: `職業名詞`,
+        prompt: `If you want to fight for justice and human rights, you can become a l______r in the future.`,
+        blankToken: `l______r`, hint: `名詞：律師`,
+        answer: `lawyer`,
+        explain: `爭取人權（fight for human rights）與司法正義符合律師 lawyer 的職責。`
+      },
+      {
+        id: `e3_v9`, exam: `3`, type: `vocab`, num: 9, topic: `生活名詞`,
+        prompt: `To keep the living room clean, please put your books inside the desk d______r.`,
+        blankToken: `d______r`, hint: `名詞：抽屜`,
+        answer: `drawer`,
+        explain: `把書本收進書桌的「抽屜（drawer）」內以保持客廳整潔。`
+      },
+      {
+        id: `e3_v10`, exam: `3`, type: `vocab`, num: 10, topic: `職業名詞`,
+        prompt: `The mail c______r rides his motorcycle to deliver letters in our neighborhood every day.`,
+        blankToken: `c______r`, hint: `單數名詞：郵差（mail carrier）`,
+        answer: `carrier`,
+        explain: `mail carrier 表「郵差、郵件派遞員」，動詞 rides 為單數，故填單數 carrier。`
+      },
+
+      // 二、語法選擇 (1-15)
+      {
+        id: `e3_g1`, exam: `3`, type: `grammar`, num: 1, topic: `時間讀法`,
+        prompt: `Kevin: What time is it now?　Amy: It is 10:45. In other words, it is ______.`,
+        options: [`a quarter past ten`, `half past ten`, `a quarter to eleven`, `fifteen after eleven`],
+        answer: `C`,
+        explain: `10:45 為「差一刻十一點」，以逆讀法表示為 a quarter to eleven。`
+      },
+      {
+        id: `e3_g2`, exam: `3`, type: `grammar`, num: 2, topic: `過去進行式`,
+        prompt: `When the earthquake happened last night, Mr. White ______ a bath in the bathroom.`,
+        options: [`takes`, `took`, `is taking`, `was taking`],
+        answer: `D`,
+        explain: `過去某特定時間點（when the earthquake happened）正在洗澡，用過去進行式 was taking。`
+      },
+      {
+        id: `e3_g3`, exam: `3`, type: `grammar`, num: 3, topic: `過去進行式`,
+        prompt: `My brother and I ______ the stairs when Mom came back home.`,
+        options: [`are mopping`, `were mopping`, `mopped`, `mop`],
+        answer: `B`,
+        explain: `主詞 My brother and I 為複數，媽媽回家時正在拖樓梯，用過去進行式 were mopping。`
+      },
+      {
+        id: `e3_g4`, exam: `3`, type: `grammar`, num: 4, topic: `不定詞`,
+        prompt: `Daniel decided ______ the school basketball team to improve his skills.`,
+        options: [`join`, `to join`, `joining`, `joined`],
+        answer: `B`,
+        explain: `動詞 decide 後接不定詞 to V，故選 to join。`
+      },
+      {
+        id: `e3_g5`, exam: `3`, type: `grammar`, num: 5, topic: `虛主詞 It`,
+        prompt: `______ is very important for students to get enough sleep before the exam.`,
+        options: [`That`, `This`, `It`, `There`],
+        answer: `C`,
+        explain: `虛主詞句型：It is + adj. + for sb + to V。`
+      },
+      {
+        id: `e3_g6`, exam: `3`, type: `grammar`, num: 6, topic: `動名詞`,
+        prompt: `Leo enjoyed ______ funny stories to his little sister before bedtime.`,
+        options: [`to tell`, `tell`, `telling`, `told`],
+        answer: `C`,
+        explain: `動詞 enjoy 後須接動名詞 V-ing 作受詞，故選 telling。`
+      },
+      {
+        id: `e3_g7`, exam: `3`, type: `grammar`, num: 7, topic: `動名詞`,
+        prompt: `The kitchen was very dirty, so Mom kept ______ the floor for an hour.`,
+        options: [`wiping`, `to wipe`, `wiped`, `wipe`],
+        answer: `A`,
+        explain: `動詞 keep 後接動名詞 wiping，表示「持續擦拭」。`
+      },
+      {
+        id: `e3_g8`, exam: `3`, type: `grammar`, num: 8, topic: `動名詞當主詞`,
+        prompt: `Swimming and dancing ______ Sandy's favorite leisure activities.`,
+        options: [`is`, `are`, `to be`, `being`],
+        answer: `B`,
+        explain: `兩個動名詞（Swimming and dancing）以 and 連接當主詞視為複數，be 動詞用 are。`
+      },
+      {
+        id: `e3_g9`, exam: `3`, type: `grammar`, num: 9, topic: `過去進行式`,
+        prompt: `Eric: Were you sleepwalking at midnight yesterday?　Gary: ______ I was dreaming in bed then.`,
+        options: [`No, I didn't.`, `Yes, I did.`, `No, I wasn't.`, `Yes, I was.`],
+        answer: `C`,
+        explain: `由當時在床上作夢可知為否定；過去進行式疑問句「Were you...?」否定答覆為「No, I wasn't.」。`
+      },
+      {
+        id: `e3_g10`, exam: `3`, type: `grammar`, num: 10, topic: `過去進行式`,
+        prompt: `We were eating dinner at 6:30 yesterday evening, but David ______.`,
+        options: [`wasn't`, `didn't`, `isn't`, `doesn't`],
+        answer: `A`,
+        explain: `but 連接對比句，主詞 David 為單數，過去進行式否定簡答為 wasn't。`
+      },
+      {
+        id: `e3_g11`, exam: `3`, type: `grammar`, num: 11, topic: `動名詞與不定詞辨析`,
+        prompt: `The bell rang for class, so the students stopped ______ and sat down.`,
+        options: [`to talk`, `talking`, `talked`, `to talking`],
+        answer: `B`,
+        explain: `stop V-ing 表「停止正在做的事」，上課鐘響學生應停止講話（stop talking）並坐下。`
+      },
+      {
+        id: `e3_g12`, exam: `3`, type: `grammar`, num: 12, topic: `不定詞`,
+        prompt: `Sandy hopes ______ a professional reporter on TV in the future.`,
+        options: [`becoming`, `become`, `to become`, `became`],
+        answer: `C`,
+        explain: `動詞 hope 後接不定詞 to become。`
+      },
+      {
+        id: `e3_g13`, exam: `3`, type: `grammar`, num: 13, topic: `動名詞當主詞`,
+        prompt: `______ hard every day is the best way to make your dreams come true.`,
+        options: [`Working`, `Work`, `Worked`, `Works`],
+        answer: `A`,
+        explain: `動名詞 Working hard 置於句首當主詞，搭配單數動詞 is。`
+      },
+      {
+        id: `e3_g14`, exam: `3`, type: `grammar`, num: 14, topic: `時間讀法`,
+        prompt: `What time does the clock show? "It's 8:30." That means it is ______.`,
+        options: [`thirty to eight`, `half to eight`, `half past eight`, `a quarter past eight`],
+        answer: `C`,
+        explain: `8:30 表「八點半」，英文讀作 half past eight。`
+      },
+      {
+        id: `e3_g15`, exam: `3`, type: `grammar`, num: 15, topic: `動名詞`,
+        prompt: `I practiced ______ English conversation with my classmates yesterday afternoon.`,
+        options: [`speaking`, `to speak`, `spoke`, `speak`],
+        answer: `A`,
+        explain: `動詞 practice 後接動名詞 speaking。`
+      },
+
+      // 三、克漏字測驗 (16-22)
+      {
+        id: `e3_c16`, exam: `3`, type: `cloze`, num: 16, topic: `克漏字・過去進行式`, passageId: `e3_A`, blankNum: 16,
+        prompt: `請依題組 A 文意選出第 16 格最適當的答案：`,
+        options: [`was washing`, `washes`, `is washing`, `washed`],
+        answer: `A`,
+        explain: `過去特定時間點（At 3:30 yesterday afternoon）正在洗車，用過去進行式 was washing。`
+      },
+      {
+        id: `e3_c17`, exam: `3`, type: `cloze`, num: 17, topic: `克漏字・過去簡單式`, passageId: `e3_A`, blankNum: 17,
+        prompt: `請依題組 A 文意選出第 17 格最適當的答案：`,
+        options: [`runs`, `was running`, `ran`, `is running`],
+        answer: `C`,
+        explain: `when 引導瞬間動作的時間子句，表示小狗跑進房間，用過去式 ran。`
+      },
+      {
+        id: `e3_c18`, exam: `3`, type: `cloze`, num: 18, topic: `克漏字・不定詞`, passageId: `e3_A`, blankNum: 18,
+        prompt: `請依題組 A 文意選出第 18 格最適當的答案：`,
+        options: [`to enjoy`, `enjoying`, `enjoyed`, `enjoy`],
+        answer: `A`,
+        explain: `stop 後接不定詞 to enjoy，表示停下手邊工作「去享用」茶點。`
+      },
+      {
+        id: `e3_c19`, exam: `3`, type: `cloze`, num: 19, topic: `克漏字・動名詞`, passageId: `e3_B`, blankNum: 19,
+        prompt: `請依題組 B 文意選出第 19 格最適當的答案：`,
+        options: [`cook`, `cooking`, `cooked`, `cooks`],
+        answer: `B`,
+        explain: `本單元強調動名詞用法，love 後接動名詞 cooking。`
+      },
+      {
+        id: `e3_c20`, exam: `3`, type: `cloze`, num: 20, topic: `克漏字・動詞片語`, passageId: `e3_B`, blankNum: 20,
+        prompt: `請依題組 B 文意選出第 20 格最適當的答案：`,
+        options: [`give up`, `wake up`, `break down`, `cool down`],
+        answer: `A`,
+        explain: `雖然工作令人疲憊，但他從未打算「放棄（give up）」。`
+      },
+      {
+        id: `e3_c21`, exam: `3`, type: `cloze`, num: 21, topic: `克漏字・動名詞`, passageId: `e3_B`, blankNum: 21,
+        prompt: `請依題組 B 文意選出第 21 格最適當的答案：`,
+        options: [`practice`, `practiced`, `practicing`, `to practice`],
+        answer: `C`,
+        explain: `keep 後接動名詞 practicing，表示持續練習。`
+      },
+      {
+        id: `e3_c22`, exam: `3`, type: `cloze`, num: 22, topic: `克漏字・動名詞當主詞`, passageId: `e3_B`, blankNum: 22,
+        prompt: `請依題組 B 文意選出第 22 格最適當的答案：`,
+        options: [`try`, `trying`, `tried`, `tries`],
+        answer: `B`,
+        explain: `that 子句缺少主詞，須使用動名詞 trying hard（努力嘗試）當作主詞。`
+      }
+    ];
+
+    const TYPE_LABELS = {
+      vocab: `文意字彙`,
+      grammar: `語法選擇`,
+      cloze: `克漏字測驗`
+    };
+    const LETTERS = [`A`, `B`, `C`, `D`];
+
+    // =========================================================================
+    // 2. APPLICATION STATE
+    // =========================================================================
+    const appState = {
+      answers: {},       // { [id]: { userAnswer: string, isCorrect: boolean } }
+      activeExam: `all`, // 'all' | '1' | '2' | '3'
+      activeType: `all`, // 'all' | 'vocab' | 'grammar' | 'cloze'
+      onlyWrong: false,
+      viewMode: `single`, // 'single' | 'list'
+      currentIndex: 0,
+      revealedHints: {}  // { [id]: true }
+    };
+
+    function getFilteredQuestions() {
+      return QUESTIONS.filter(function(q) {
+        if (appState.activeExam !== `all` && q.exam !== appState.activeExam) return false;
+        if (appState.activeType !== `all` && q.type !== appState.activeType) return false;
+        if (appState.onlyWrong) {
+          const rec = appState.answers[q.id];
+          if (!rec || rec.isCorrect) return false;
+        }
+        return true;
+      });
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, `&amp;`)
+        .replace(/</g, `&lt;`)
+        .replace(/>/g, `&gt;`)
+        .replace(/"/g, `&quot;`)
+        .replace(/'/g, `&#39;`);
+    }
+
+    function iconCheckSvg() {
+      return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+    }
+    function iconCrossSvg() {
+      return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+    }
+
+    // =========================================================================
+    // 3. STATE PERSISTENCE (notebookAppApi)
+    // =========================================================================
+    async function saveState() {
+      const chip = document.getElementById(`save-status-chip`);
+      if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === `function`) {
+        try {
+          await window.notebookAppApi.setAppState({
+            answers: appState.answers,
+            activeExam: appState.activeExam,
+            activeType: appState.activeType,
+            onlyWrong: appState.onlyWrong,
+            viewMode: appState.viewMode,
+            currentIndex: appState.currentIndex
+          });
+          if (chip) chip.textContent = `進度已自動儲存`;
+        } catch (err) {
+          if (chip) chip.textContent = `作答進度暫存中`;
+        }
+      }
+    }
+
+    async function loadState() {
+      if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === `function`) {
+        try {
+          const saved = await window.notebookAppApi.getAppState();
+          if (saved && typeof saved === `object`) {
+            if (saved.answers && typeof saved.answers === `object`) appState.answers = saved.answers;
+            if (typeof saved.activeExam === `string`) appState.activeExam = saved.activeExam;
+            if (typeof saved.activeType === `string`) appState.activeType = saved.activeType;
+            if (typeof saved.onlyWrong === `boolean`) appState.onlyWrong = saved.onlyWrong;
+            if (typeof saved.viewMode === `string`) appState.viewMode = saved.viewMode;
+            if (typeof saved.currentIndex === `number`) appState.currentIndex = saved.currentIndex;
+          }
+        } catch (err) {
+          // Proceed with clean defaults if state retrieval fails
+        }
+      }
+    }
+
+    // =========================================================================
+    // 4. INTERACTION HANDLERS (Hoisted function declarations)
+    // =========================================================================
+    function setExamFilter(exam) {
+      appState.activeExam = exam;
+      appState.currentIndex = 0;
+      disarmResetButton();
+      renderAll();
+      saveState();
+    }
+
+    function setTypeFilter(type) {
+      appState.activeType = type;
+      appState.currentIndex = 0;
+      disarmResetButton();
+      renderAll();
+      saveState();
+    }
+
+    function toggleWrongOnly() {
+      appState.onlyWrong = !appState.onlyWrong;
+      appState.currentIndex = 0;
+      disarmResetButton();
+      renderAll();
+      saveState();
+    }
+
+    function toggleViewMode() {
+      appState.viewMode = appState.viewMode === `single` ? `list` : `single`;
+      renderAll();
+      saveState();
+    }
+
+    function goToQuestion(idx) {
+      const list = getFilteredQuestions();
+      if (idx < 0 || idx >= list.length) return;
+      appState.currentIndex = idx;
+      if (appState.viewMode === `list`) {
+        appState.viewMode = `single`;
+      }
+      renderAll();
+      saveState();
+    }
+
+    function prevQuestion() {
+      goToQuestion(appState.currentIndex - 1);
+    }
+
+    function nextQuestion() {
+      goToQuestion(appState.currentIndex + 1);
+    }
+
+    function submitChoice(questionId, chosenLetter) {
+      const q = QUESTIONS.find(function(item) { return item.id === questionId; });
+      if (!q || appState.answers[questionId]) return;
+      const isCorrect = chosenLetter === q.answer;
+      appState.answers[questionId] = {
+        userAnswer: chosenLetter,
+        isCorrect: isCorrect
+      };
+      renderAll();
+      saveState();
+    }
+
+    function submitVocab(event, questionId) {
+      if (event) event.preventDefault();
+      const q = QUESTIONS.find(function(item) { return item.id === questionId; });
+      if (!q || appState.answers[questionId]) return;
+      const input = document.getElementById(`vocab-input-${questionId}`);
+      const errEl = document.getElementById(`vocab-error-${questionId}`);
+      if (!input) return;
+
+      const raw = input.value.trim();
+      if (!raw) {
+        if (errEl) errEl.textContent = `請先輸入英文單字，或點選「看解答」跳過本題。`;
+        input.focus();
+        return;
+      }
+      const normalized = raw.toLowerCase();
+      const target = q.answer.toLowerCase();
+      const isCorrect = normalized === target;
+      appState.answers[questionId] = {
+        userAnswer: raw,
+        isCorrect: isCorrect
+      };
+      renderAll();
+      saveState();
+    }
+
+    function revealVocabAnswer(questionId) {
+      const q = QUESTIONS.find(function(item) { return item.id === questionId; });
+      if (!q || appState.answers[questionId]) return;
+      appState.answers[questionId] = {
+        userAnswer: `（略過作答）`,
+        isCorrect: false
+      };
+      renderAll();
+      saveState();
+    }
+
+    function toggleVocabHint(questionId) {
+      appState.revealedHints[questionId] = !appState.revealedHints[questionId];
+      renderQuizArea();
+    }
+
+    function retrySingleQuestion(questionId) {
+      if (!appState.answers[questionId]) return;
+      delete appState.answers[questionId];
+      renderAll();
+      saveState();
+    }
+
+    function disarmResetButton() {
+      const btn = document.getElementById(`btn-reset-scope`);
+      if (btn) {
+        btn.dataset.armed = `false`;
+        btn.textContent = `重新測驗目前範圍`;
+      }
+    }
+
+    function handleResetScope(btn) {
+      if (!btn) return;
+      if (btn.dataset.armed !== `true`) {
+        btn.dataset.armed = `true`;
+        btn.textContent = `再次點擊確認清空作答紀錄`;
+        return;
+      }
+      btn.dataset.armed = `false`;
+      btn.textContent = `重新測驗目前範圍`;
+
+      const filtered = getFilteredQuestions();
+      filtered.forEach(function(q) {
+        delete appState.answers[q.id];
+      });
+      if (appState.onlyWrong) {
+        appState.onlyWrong = false;
+      }
+      appState.currentIndex = 0;
+      renderAll();
+      saveState();
+    }
+
+    function exportWrongNotes() {
+      const wrongList = QUESTIONS.filter(function(q) {
+        const rec = appState.answers[q.id];
+        return rec && !rec.isCorrect;
+      });
+      if (wrongList.length === 0) return;
+
+      const lines = [
+        `八年級英語定期評量（Unit 3–4 含節慶篇）錯題複習筆記`,
+        `==================================================`,
+        `錯題總數：${wrongList.length} 題`,
+        ``
+      ];
+      wrongList.forEach(function(q, index) {
+        const rec = appState.answers[q.id];
+        const correctText = q.type === `vocab`
+          ? q.answer
+          : `(${q.answer}) ${q.options[LETTERS.indexOf(q.answer)]}`;
+        const userText = q.type === `vocab`
+          ? rec.userAnswer
+          : `(${rec.userAnswer}) ${q.options[LETTERS.indexOf(rec.userAnswer)] || ``}`;
+        lines.push(`${index + 1}. [第 ${q.exam} 回・${TYPE_LABELS[q.type]} 第 ${q.num} 題] (${q.topic})`);
+        if (q.passageId) {
+          lines.push(`   短文背景：${PASSAGES[q.passageId]}`);
+        }
+        lines.push(`   題目：${q.prompt}`);
+        lines.push(`   你的作答：${userText}`);
+        lines.push(`   正確答案：${correctText}`);
+        lines.push(`   重點解析：${q.explain}`);
+        lines.push(``);
+      });
+
+      const content = lines.join(`\n`);
+      if (window.notebookAppApi && typeof window.notebookAppApi.triggerFileDownload === `function`) {
+        window.notebookAppApi.triggerFileDownload({
+          content: content,
+          contentType: `text/plain`,
+          encoding: `UTF-8`,
+          filename: `grade8-english-wrong-notes.txt`
+        });
+      }
+    }
+
+    // =========================================================================
+    // 5. RENDERING ENGINE
+    // =========================================================================
+    function renderPassageHtml(passageId, currentBlankNum, exam) {
+      const raw = PASSAGES[passageId] || ``;
+      // Replace ___16___ tokens with styled inline blanks
+      return escapeHtml(raw).replace(/___(\d+)___/g, function(_, numStr) {
+        const num = Number(numStr);
+        const q = QUESTIONS.find(function(item) {
+          return item.exam === exam && item.type === `cloze` && item.blankNum === num;
+        });
+        const rec = q ? appState.answers[q.id] : null;
+        let cls = `cloze-blank`;
+        let label = `${num}`;
+        if (num === currentBlankNum) {
+          cls += ` is-current`;
+        }
+        if (rec) {
+          const chosenText = q.options[LETTERS.indexOf(rec.userAnswer)] || ``;
+          const correctText = q.options[LETTERS.indexOf(q.answer)] || ``;
+          if (rec.isCorrect) {
+            cls += ` is-correct`;
+            label = `${num}. ${correctText}`;
+          } else {
+            cls += ` is-wrong`;
+            label = `${num}. ${chosenText} → ${correctText}`;
+          }
+        }
+        return `<span class="${cls}">${escapeHtml(label)}</span>`;
+      });
+    }
+
+    function renderPromptHtml(q) {
+      if (q.type === `vocab` && q.blankToken) {
+        const rec = appState.answers[q.id];
+        const parts = q.prompt.split(q.blankToken);
+        if (parts.length === 2) {
+          const tokenDisplay = rec ? q.answer : q.blankToken;
+          return `${escapeHtml(parts[0])}<span class="vocab-blank-token">${escapeHtml(tokenDisplay)}</span>${escapeHtml(parts[1])}`;
+        }
+      }
+      return escapeHtml(q.prompt);
+    }
+
+    function renderQuestionCardHtml(q, indexInList, totalInList, isListMode) {
+      const rec = appState.answers[q.id];
+      const isAnswered = Boolean(rec);
+      const headerLabel = `第 ${q.exam} 回・${TYPE_LABELS[q.type]}（原卷第 ${q.num} 題）`;
+      const counterLabel = `${indexInList + 1} / ${totalInList}`;
+
+      let passageBlock = ``;
+      if (q.passageId) {
+        passageBlock = `
+          <div class="passage-box">
+            <span class="passage-label">克漏字短文（目前作答第 ${q.blankNum} 格）</span>
+            <div>${renderPassageHtml(q.passageId, q.blankNum, q.exam)}</div>
+          </div>
+        `;
+      }
+
+      let bodyBlock = ``;
+      if (q.type === `vocab`) {
+        const hintVisible = Boolean(appState.revealedHints[q.id]);
+        const inputVal = rec ? rec.userAnswer : ``;
+        const inputClass = rec ? (rec.isCorrect ? `text-input is-correct` : `text-input is-wrong`) : `text-input`;
+
+        bodyBlock = `
+          ${hintVisible ? `<div class="hint-box">${escapeHtml(q.hint)}</div>` : ``}
+          <form class="vocab-form" onsubmit="submitVocab(event, '${q.id}')">
+            <div class="input-field-group">
+              <label class="label-text" for="vocab-input-${q.id}">請輸入完整英文單字（含字首字尾提示字母）</label>
+              <input
+                type="text"
+                id="vocab-input-${q.id}"
+                class="${inputClass}"
+                value="${escapeHtml(inputVal)}"
+                autocomplete="off"
+                autocapitalize="none"
+                spellcheck="false"
+                ${isAnswered ? `disabled` : ``}
+                placeholder="輸入完整單字後按 Enter"
+              >
+            </div>
+            ${!isAnswered ? `
+              <button type="submit" class="btn btn-primary">送出答案</button>
+              <button type="button" class="btn btn-ghost" onclick="toggleVocabHint('${q.id}')">
+                ${hintVisible ? `隱藏提示` : `字義提示`}
+              </button>
+              <button type="button" class="btn btn-ghost" onclick="revealVocabAnswer('${q.id}')">看解答</button>
+            ` : ``}
+          </form>
+          <div class="form-error-msg" id="vocab-error-${q.id}" aria-live="polite"></div>
+        `;
+      } else {
+        const hasShortOptions = q.options.every(function(opt) { return opt.length <= 16; });
+        const listClass = hasShortOptions ? `options-list two-col` : `options-list`;
+        const optionsHtml = q.options.map(function(opt, idx) {
+          const letter = LETTERS[idx];
+          let optClass = `option-btn`;
+          let statusIcon = ``;
+          if (isAnswered) {
+            if (letter === q.answer) {
+              optClass += ` is-correct`;
+              statusIcon = `<span class="option-status-icon">${iconCheckSvg()}</span>`;
+            } else if (letter === rec.userAnswer && !rec.isCorrect) {
+              optClass += ` is-wrong`;
+              statusIcon = `<span class="option-status-icon">${iconCrossSvg()}</span>`;
+            }
+          }
+          return `
+            <button
+              type="button"
+              class="${optClass}"
+              ${isAnswered ? `disabled` : ``}
+              onclick="submitChoice('${q.id}', '${letter}')"
+            >
+              <span class="option-letter">${letter}</span>
+              <span>${escapeHtml(opt)}</span>
+              ${statusIcon}
+            </button>
+          `;
+        }).join(``);
+
+        bodyBlock = `<div class="${listClass}">${optionsHtml}</div>`;
+      }
+
+      let feedbackBlock = ``;
+      if (isAnswered) {
+        const answerDisplay = q.type === `vocab`
+          ? q.answer
+          : `(${q.answer}) ${q.options[LETTERS.indexOf(q.answer)]}`;
+        const userDisplay = q.type === `vocab`
+          ? rec.userAnswer
+          : `(${rec.userAnswer}) ${q.options[LETTERS.indexOf(rec.userAnswer)] || ``}`;
+
+        feedbackBlock = `
+          <div class="feedback-panel" data-result="${rec.isCorrect ? `ok` : `wrong`}" aria-live="polite">
+            <div class="feedback-header ${rec.isCorrect ? `ok` : `wrong`}">
+              <span>${rec.isCorrect ? `答對了！表現很棒` : `再注意一下！正確答案為 ${escapeHtml(answerDisplay)}`}</span>
+              <button type="button" class="btn btn-ghost" onclick="retrySingleQuestion('${q.id}')">重作此題</button>
+            </div>
+            ${!rec.isCorrect ? `<div class="feedback-answer-line">你的作答：${escapeHtml(userDisplay)}　｜　正確答案：${escapeHtml(answerDisplay)}</div>` : ``}
+            <p class="feedback-explain"><strong>解析：</strong>${escapeHtml(q.explain)}</p>
+          </div>
+        `;
+      }
+
+      let footerNav = ``;
+      if (!isListMode) {
+        footerNav = `
+          <div class="quiz-footer-nav">
+            <button type="button" class="btn btn-ghost" onclick="prevQuestion()" ${indexInList <= 0 ? `disabled` : ``}>
+              上一題
+            </button>
+            <span class="label-text">第 ${indexInList + 1} 題 / 共 ${totalInList} 題</span>
+            <button type="button" class="btn btn-primary" onclick="nextQuestion()" ${indexInList >= totalInList - 1 ? `disabled` : ``}>
+              下一題
+            </button>
+          </div>
+        `;
+      }
+
+      return `
+        <article class="quiz-card">
+          <div class="quiz-meta-bar">
+            <div class="chip-row">
+              <span class="chip" data-status="info">${escapeHtml(headerLabel)}</span>
+              <span class="chip" data-status="neutral">${escapeHtml(q.topic)}</span>
+            </div>
+            <span class="quiz-number">${counterLabel}</span>
+          </div>
+          ${passageBlock}
+          <p class="question-stem">${renderPromptHtml(q)}</p>
+          ${bodyBlock}
+          ${feedbackBlock}
+          ${footerNav}
+        </article>
+      `;
+    }
+
+    function renderQuizArea() {
+      const container = document.getElementById(`quiz-main-area`);
+      if (!container) return;
+
+      const list = getFilteredQuestions();
+      if (list.length === 0) {
+        const msg = appState.onlyWrong
+          ? `目前篩選範圍內沒有錯題紀錄！`
+          : `目前篩選條件沒有符合的題目。`;
+        const sub = appState.onlyWrong
+          ? `這代表你在目前範圍內的作答表現很穩定，可以切換回「全部題型」繼續挑戰其他試題。`
+          : `請重設篩選條件以檢視試題。`;
+        container.innerHTML = `
+          <div class="empty-state">
+            <h2 class="section-title">${msg}</h2>
+            <p class="lede">${sub}</p>
+            <button type="button" class="btn btn-primary" onclick="toggleWrongOnly()">返回一般練習模式</button>
+          </div>
+        `;
+        return;
+      }
+
+      if (appState.currentIndex >= list.length) {
+        appState.currentIndex = 0;
+      }
+
+      if (appState.viewMode === `list`) {
+        const cardsHtml = list.map(function(q, idx) {
+          return renderQuestionCardHtml(q, idx, list.length, true);
+        }).join(``);
+        container.innerHTML = `<div class="list-view-stack">${cardsHtml}</div>`;
+      } else {
+        const currentQ = list[appState.currentIndex];
+        container.innerHTML = renderQuestionCardHtml(currentQ, appState.currentIndex, list.length, false);
+      }
+    }
+
+    function renderScoreboardAndFilters() {
+      const list = getFilteredQuestions();
+      let answeredCount = 0;
+      let correctCount = 0;
+      list.forEach(function(q) {
+        const rec = appState.answers[q.id];
+        if (rec) {
+          answeredCount++;
+          if (rec.isCorrect) correctCount++;
+        }
+      });
+
+      const totalWrongAll = QUESTIONS.filter(function(q) {
+        const rec = appState.answers[q.id];
+        return rec && !rec.isCorrect;
+      }).length;
+
+      const pct = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : null;
+
+      const kpiProg = document.getElementById(`kpi-progress`);
+      const kpiProgCap = document.getElementById(`kpi-progress-cap`);
+      const kpiCorr = document.getElementById(`kpi-correct`);
+      const kpiCorrCap = document.getElementById(`kpi-correct-cap`);
+      const kpiWrong = document.getElementById(`kpi-wrong`);
+      const kpiWrongCap = document.getElementById(`kpi-wrong-cap`);
+
+      if (kpiProg) kpiProg.textContent = `${answeredCount} / ${list.length} 題`;
+      if (kpiProgCap) {
+        kpiProgCap.textContent = list.length === 0
+          ? `目前無可顯示題目`
+          : (answeredCount === list.length ? `目前範圍已全數作答完畢！` : `尚餘 ${list.length - answeredCount} 題未作答`);
+      }
+
+      if (kpiCorr) kpiCorr.textContent = `${correctCount} 題（${pct !== null ? pct + `%` : `--%`}）`;
+      if (kpiCorrCap) {
+        if (pct === null) {
+          kpiCorrCap.textContent = `目標達標線：80% 以上`;
+        } else if (pct >= 80) {
+          kpiCorrCap.textContent = `已達 80% 精熟目標線！`;
+        } else {
+          kpiCorrCap.textContent = `持續訂正錯題即可提升至 80% 以上`;
+        }
+      }
+
+      if (kpiWrong) kpiWrong.textContent = `${totalWrongAll} 題`;
+      if (kpiWrongCap) {
+        kpiWrongCap.textContent = totalWrongAll > 0 ? `可點選下方「只練習錯題」進行加強` : `目前尚無待訂正錯題`;
+      }
+
+      // Filter button pressed states
+      [`all`, `1`, `2`, `3`].forEach(function(val) {
+        const btn = document.getElementById(`exam-btn-${val}`);
+        if (btn) btn.setAttribute(`aria-pressed`, String(appState.activeExam === val));
+      });
+      [`all`, `vocab`, `grammar`, `cloze`].forEach(function(val) {
+        const btn = document.getElementById(`type-btn-${val}`);
+        if (btn) btn.setAttribute(`aria-pressed`, String(appState.activeType === val));
+      });
+
+      const wrongBtn = document.getElementById(`btn-only-wrong`);
+      const wrongCountSpan = document.getElementById(`wrong-filter-count`);
+      if (wrongCountSpan) wrongCountSpan.textContent = String(totalWrongAll);
+      if (wrongBtn) wrongBtn.setAttribute(`aria-pressed`, String(appState.onlyWrong));
+
+      const viewBtn = document.getElementById(`btn-view-mode`);
+      if (viewBtn) {
+        viewBtn.setAttribute(`aria-pressed`, String(appState.viewMode === `list`));
+        viewBtn.textContent = appState.viewMode === `list` ? `切換為單題專注模式` : `切換為全卷列表檢視`;
+      }
+
+      const exportBtn = document.getElementById(`btn-export-wrong`);
+      if (exportBtn) exportBtn.disabled = totalWrongAll === 0;
+
+      const resetBtn = document.getElementById(`btn-reset-scope`);
+      if (resetBtn) resetBtn.disabled = answeredCount === 0;
+
+      // Completion banner
+      const banner = document.getElementById(`completion-banner`);
+      if (banner) {
+        if (list.length > 0 && answeredCount === list.length && !appState.onlyWrong) {
+          const score100 = Math.round((correctCount / list.length) * 100);
+          banner.hidden = false;
+          banner.dataset.level = score100 >= 80 ? `ok` : `review`;
+          banner.innerHTML = `
+            <div class="header-top-row">
+              <h2 class="section-title">本範圍測驗完成：總分 ${score100} 分（答對 ${correctCount} / ${list.length} 題）</h2>
+              <span class="chip" data-status="${score100 >= 80 ? `ok` : `info`}">
+                ${score100 >= 80 ? `表現優異，已達精熟標準` : `建議針對錯題再練習一次`}
+              </span>
+            </div>
+            <div class="action-row">
+              ${totalWrongAll > 0 ? `<button type="button" class="btn btn-primary" onclick="toggleWrongOnly()">只複習錯題 (${totalWrongAll})</button>` : ``}
+              <button type="button" class="btn btn-secondary" onclick="handleResetScope(document.getElementById('btn-reset-scope'))">重新測驗目前範圍</button>
+            </div>
+          `;
+        } else {
+          banner.hidden = true;
+          banner.innerHTML = ``;
+        }
+      }
+    }
+
+    function renderSidebar() {
+      const list = getFilteredQuestions();
+      const navLabel = document.getElementById(`nav-count-label`);
+      const navGrid = document.getElementById(`q-nav-grid`);
+      if (navLabel) navLabel.textContent = `共 ${list.length} 題`;
+
+      if (navGrid) {
+        if (list.length === 0) {
+          navGrid.innerHTML = `<span class="label-text">無題目可顯示</span>`;
+        } else {
+          navGrid.innerHTML = list.map(function(q, idx) {
+            const rec = appState.answers[q.id];
+            let cls = `q-dot`;
+            if (rec) {
+              cls += rec.isCorrect ? ` is-correct` : ` is-wrong`;
+            }
+            if (appState.viewMode === `single` && idx === appState.currentIndex) {
+              cls += ` is-current`;
+            }
+            return `
+              <button
+                type="button"
+                class="${cls}"
+                onclick="goToQuestion(${idx})"
+                title="第 ${q.exam} 回・${TYPE_LABELS[q.type]} 第 ${q.num} 題"
+              >${idx + 1}</button>
+            `;
+          }).join(``);
+        }
+      }
+
+      // Category breakdown across all 96 questions (or active exam)
+      const statScope = appState.activeExam === `all`
+        ? QUESTIONS
+        : QUESTIONS.filter(function(q) { return q.exam === appState.activeExam; });
+
+      const statsContainer = document.getElementById(`category-stats-list`);
+      if (statsContainer) {
+        const categories = [`vocab`, `grammar`, `cloze`];
+        statsContainer.innerHTML = categories.map(function(cat) {
+          const items = statScope.filter(function(q) { return q.type === cat; });
+          let ans = 0;
+          let ok = 0;
+          items.forEach(function(q) {
+            const rec = appState.answers[q.id];
+            if (rec) {
+              ans++;
+              if (rec.isCorrect) ok++;
+            }
+          });
+          const rate = ans > 0 ? Math.round((ok / ans) * 100) : 0;
+          const rateLabel = ans > 0 ? `${ok}/${ans} 題正確（${rate}%）` : `尚未作答（共 ${items.length} 題）`;
+          return `
+            <div class="stat-item">
+              <div class="stat-item-top">
+                <span class="stat-name">${TYPE_LABELS[cat]}</span>
+                <span class="stat-nums">${rateLabel}</span>
+              </div>
+              <div class="meter-track" role="progressbar" aria-valuenow="${rate}" aria-valuemin="0" aria-valuemax="100" aria-label="${TYPE_LABELS[cat]}正確率">
+                <div class="meter-target-band" title="目標達標區間 80%–100%"></div>
+                <div class="meter-fill ${rate >= 80 && ans > 0 ? `is-mastered` : ``}" style="width: ${rate}%"></div>
+              </div>
+            </div>
+          `;
+        }).join(``);
+      }
+    }
+
+    function renderAll() {
+      renderScoreboardAndFilters();
+      renderQuizArea();
+      renderSidebar();
+    }
+
+    // =========================================================================
+    // 6. INITIALIZATION
+    // =========================================================================
+    (async function initApp() {
+      await loadState();
+      renderAll();
+      if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === `function`) {
+        window.notebookAppApi.notifyAppReady();
+      }
+    })();
+  </script>
+</body>
+</html>
